@@ -1,5 +1,5 @@
 import streamlit as st
-
+from logzero import logger
 st.write("the code is going ot check")
 try:
   import requests

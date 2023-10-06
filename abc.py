@@ -13,7 +13,7 @@ last_save_time_5min = start_time
 data_1min = []
 data_5min = []
 
-output = subprocess.Popen(['python', 'sample.py'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+output = subprocess.Popen([f"{sys.executable}", 'sample.py'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 for line in iter(output.stdout.readline, b''):
  

@@ -16,17 +16,18 @@ data_5min = []
 output = subprocess.Popen(['python', 'sample.py'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 for line in iter(output.stdout.readline, b''):
+ 
  current_time = time.time()
  logger.info("check 1")
 
 
-   if current_time - last_save_time_1min >= 60:
+ if current_time - last_save_time_1min >= 60:
      logger.info("written to 1min DB")
      last_save_time_1min = current_time
 
 
-   logger.info("check 5")
+ logger.info("check 5")
   
-   if current_time - last_save_time_5min >= 60:
+ if current_time - last_save_time_5min >= 60:
      logger.info("written to 1min DB")
      last_save_time_5min = current_time

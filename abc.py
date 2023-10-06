@@ -1,4 +1,11 @@
 import streamlit as st
+
+try:
+ from SmartApi import SmartConnect
+ logger.info("installed ok")
+except Exception as e:
+ logger.info(f'error not found: {e}')
+ 
 from logzero import logger
 import subprocess
 import time

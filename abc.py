@@ -14,9 +14,10 @@ data_1min = []
 data_5min = []
 
 output = subprocess.Popen(['python', 'sample.py'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
- for line in iter(output.stdout.readline, b''):
-    current_time = time.time()
-   logger.info("check 1")
+
+for line in iter(output.stdout.readline, b''):
+ current_time = time.time()
+ logger.info("check 1")
 
 
    if current_time - last_save_time_1min >= 60:
